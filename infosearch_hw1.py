@@ -37,7 +37,7 @@ def preprocess(text, stop_words):
 # preprocess and index texts with CountVectorizer
 def index(episode_texts):
     episode_lemmas = []
-    print('Preprocessing...')
+    print('Preprocessing... (takes about 25 min)')
     for episode_text in tqdm(episode_texts):
         lemmas = preprocess(episode_text, stop_words)
         episode_lemmas.append(' '.join(lemmas))
